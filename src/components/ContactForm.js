@@ -7,7 +7,7 @@ class ContactForm extends Component {
     number: '',
   };
 
-  handeChange = e => {
+            handeChange = e => {
     const { name, value } = e.currentTarget;
     this.setState({ [name]: value });
   };
@@ -25,9 +25,10 @@ class ContactForm extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <label className='label'>
+        <label className="label">
           Name
-          <input className='input'
+          <input
+            className="input"
             type="text"
             value={this.state.name}
             onChange={this.handeChange}
@@ -37,9 +38,10 @@ class ContactForm extends Component {
             required
           />
         </label>
-        <label className='label'>
+        <label className="label">
           Phone
-          <input className='input'
+          <input
+            className="input"
             type="tel"
             value={this.state.number}
             onChange={this.handeChange}
@@ -47,7 +49,9 @@ class ContactForm extends Component {
             required
           />
         </label>
-        <button className='button' type="submit">Add contact</button>
+        <button className="button" type="submit">
+          Add contact
+        </button>
       </form>
     );
   }
